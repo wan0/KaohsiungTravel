@@ -1,0 +1,325 @@
+.banner {
+	//讓寬度隨瀏覽器變化
+    max-width: 1024px;
+    height: 380px;
+    margin: auto;
+    background: url(../images/Hero.png) center center no-repeat, $backgroundColor;
+    padding-top: 89px;
+    position: relative;
+    a {
+        display: block;
+        color: white;
+        margin: auto;
+        margin-bottom: 96px;
+        width: 265px;
+        font-size: 40px;
+        letter-spacing: 3.89px;
+    }
+    .selectDistricts {
+    	//取消原本select樣式
+        //appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+		//位置
+        display: block;
+        width: 452px;
+        height: 48px;
+        margin: auto;
+        //margin-bottom: 70px;
+        //樣式
+        padding-left: 9.5px;
+        border: 3px solid white;
+        border-radius: 3px;
+        //background-color: rgba(256,256,256,0.7);
+        font-size: 18px;
+        outline: none;
+        //右邊箭頭+背景顏色
+        background: url(../images/icons_down.png) no-repeat scroll right 11px center, rgba(256, 256, 256, 0.7);
+        @media (max-width: 465px) {
+            width: 320px;
+        }
+    }
+    .hotDistricts {
+    	width: 78%; //根據父元素變動
+    	height: 112px;
+    	background: white;
+    	padding: 20px 26px;
+    	border-radius: 5px;
+    	margin: auto;
+    	position: absolute;
+    	bottom: -84px;
+    	left: 11%;
+    	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+    	h2 {
+    		font-size: 18px;
+    		margin-bottom: 14px;
+    	}
+        ul {
+            li{
+                width: 130px;
+                height: 42px;
+                color: white;
+                border-radius: 5px;
+                padding: 11px 34px;
+                float: left;
+                margin-left:25px;
+                cursor: pointer;
+                font-size: 20px;
+                text-align: center;
+            }
+            .zone1 {
+                background: #8A82CC;
+            }
+            .zone2 {
+                background: #FFA782;
+            }
+            .zone3 {
+                background: #F5D105;
+            }
+            .zone4 {
+                background: #559AC8;
+            }
+            @include clearfix();
+        }
+        @media (max-width: 1024px) {
+            height: auto;
+            h2 {
+                text-align: center;
+            }
+            ul{
+                li{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        @media (max-width: 500px) {
+            position: static;
+            margin-top:40px;
+            ul{
+                li{
+                    float: none;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }    
+    }
+}
+
+.content {
+	max-width: 1024px;
+	margin: auto;
+	//沒資料的時候留白
+	padding-top: 133px;
+	padding-bottom: 40px;
+	background: $backgroundColor;
+	text-align: center;
+	hr {
+		display: inline-block;
+		width: 44%;
+		border-top: 2px dashed #559AC8;
+        @media (max-width: 500px) {
+            display: none;
+        }
+	}
+	>a {
+		width: 24px;
+		height: 24px;
+        display: inline-block;
+		border: 1px solid #559AC8;
+		border-radius: 100%;
+		background: url(../images/icons_down_2.png) center center no-repeat;
+		background-size: 11.2px 7.7px;
+		cursor: pointer;
+        @media (max-width: 500px) {
+            display: none;
+        }
+	}
+    //data w464px w320px
+	.dataList {
+        margin: 65px 24px 0 40px; //(40-16)px
+        @media (max-width: 1023px) {
+            margin: 65px 2.5% 0 2.5%;
+        }
+        @media (max-width: 767px) {
+            margin: 65px auto 0 auto;
+        }
+        @media (max-width: 500px) {
+            margin: 150px auto 0 auto;
+        }
+        h2 {
+            font-size: 36px;
+            color: #8A82CC;
+        }
+        >li {
+            width: 464px;
+            float: left;
+            margin-top: 24px;
+            margin-right: 16px;
+            @media (max-width: 1023px) {
+                margin-right: 1%;
+                width: 49%; //%計算是看父元素
+            }
+            @media (max-width: 767px) {
+                margin-right: auto;
+                margin-left: auto;
+                float: none;
+                width: 464px;
+            }
+            @media (max-width: 767px) {
+                width: 98%;
+            }
+            .dataPicture {
+                height: 155px;
+                background: url('http://khh.travel/FileArtPic.ashx?id=988&w=1280&h=960') center center no-repeat, white;
+                position: relative;
+                .dataTitle {
+                    width: 100%;
+                    height: 52px;
+                    position: absolute;
+                    bottom: 0;
+                    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.54) 100%);
+                    color: white;
+                    h3 {
+                        font-size: 24px;
+                        margin: 14px 0 14px 22px;
+                        float: left;
+                    }
+                    h4 {
+                        float: right;
+                        width: 73px;
+                        margin: 24px 0 11px 0;  
+                    }
+                    @include clearfix();
+                }
+            }
+            .dataDetail {
+                background: whtie;
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+                position: relative;
+                >li {
+                    text-align: left;
+                    padding-top: 16px;
+                    margin-left: 23px;
+                }
+                //開放時間資料過長，跑版
+                .dataOpentime, .dataAdd {
+                    width: 441px;
+                    height: 37px;
+                    //overflow: hidden;
+                    @media (max-width: 1023px) {
+                        width: 90%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 414px;
+                        height: auto;
+                    }
+                    @media (max-width: 500px) {
+                        width: 90%;
+                    }
+                }
+                .dataOpentime .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icons_clock.png) center center no-repeat;
+                    margin-right: 8px;
+                }
+                .dataAdd .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icons_pin.png) center center no-repeat;
+                    margin-right: 8px;
+                }
+                .dataTel .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icons_phone.png) center center no-repeat;
+                    margin-right: 8px;
+                }
+                //排版
+                .dataTel {
+                    padding-bottom: 20px;
+                }
+                .dataTicketinfo .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icons_tag.png) center center no-repeat;
+                    margin-right: 8px;
+                }
+                .dataTicketinfo {
+                    position: absolute;
+                    width: 118px;
+                    right: 0;
+                    bottom: 20px;
+                }
+            }
+        }
+
+        @include clearfix();
+	}
+    .dataPage {
+        margin: 49px auto 0 auto;
+        >li {
+            display: inline-block;
+            font-size: 14px;
+            a {
+                display: block;
+            }
+            .prev, .next {
+                width: 50px;
+                height: 24px;
+                color: #4A4A4A;
+            }
+            .page {
+                width: 24px;
+                height: 24px;
+                color: #4A4A4A;
+            }
+            .page.thisPage, a:hover, a:active {
+                color: #559AC8;
+            }
+            .none, .none:hover, .none:active {
+                color: rgba(73,73,73,0.50);
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 90px;
+    background: #559AC8;
+    padding: 24px 0;
+    .footnote1,
+    .footnote2 {
+        margin: auto;
+        font-size: 14px;
+    }
+    .footnote1 {
+        width: 70px;
+        color: white;
+        margin-bottom: 14px;
+    }
+    .footnote2 {
+        width: 144px;
+        color: #FFD366;
+    }
+}
+.top {
+    a {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../images/btn_goTop.png) center center no-repeat;
+        position: fixed;
+        bottom: 195px;
+        right: 28px;
+        @media (max-width: 768px) {
+            bottom: 20%;
+        }
+    }
+}

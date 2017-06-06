@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/*CSS RESET START*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+i {
+  font-style: italic; }
+
+a {
+  text-decoration: none; }
+
+*, body {
+  font-family: 微軟正黑體; }
+
+body {
+  background-color: #F7F7F7; }
+
+.banner {
+  max-width: 1024px;
+  height: 380px;
+  margin: auto;
+  background: url(../images/Hero.png) center center no-repeat, #F7F7F7;
+  padding-top: 89px;
+  position: relative; }
+  .banner a {
+    display: block;
+    color: white;
+    margin: auto;
+    margin-bottom: 96px;
+    width: 265px;
+    font-size: 40px;
+    letter-spacing: 3.89px; }
+  .banner .selectDistricts {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 452px;
+    height: 48px;
+    margin: auto;
+    padding-left: 9.5px;
+    border: 3px solid white;
+    border-radius: 3px;
+    font-size: 18px;
+    outline: none;
+    background: url(../images/icons_down.png) no-repeat scroll right 11px center, rgba(255, 255, 255, 0.7); }
+    @media (max-width: 465px) {
+      .banner .selectDistricts {
+        width: 320px; } }
+  .banner .hotDistricts {
+    width: 78%;
+    height: 112px;
+    background: white;
+    padding: 20px 26px;
+    border-radius: 5px;
+    margin: auto;
+    position: absolute;
+    bottom: -84px;
+    left: 11%;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+    .banner .hotDistricts h2 {
+      font-size: 18px;
+      margin-bottom: 14px; }
+    .banner .hotDistricts ul li {
+      width: 130px;
+      height: 42px;
+      color: white;
+      border-radius: 5px;
+      padding: 11px 34px;
+      float: left;
+      margin-left: 25px;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center; }
+    .banner .hotDistricts ul .zone1 {
+      background: #8A82CC; }
+    .banner .hotDistricts ul .zone2 {
+      background: #FFA782; }
+    .banner .hotDistricts ul .zone3 {
+      background: #F5D105; }
+    .banner .hotDistricts ul .zone4 {
+      background: #559AC8; }
+    .banner .hotDistricts ul:before, .banner .hotDistricts ul:after {
+      content: "";
+      display: table; }
+    .banner .hotDistricts ul:after {
+      clear: both; }
+    @media (max-width: 1024px) {
+      .banner .hotDistricts {
+        height: auto; }
+        .banner .hotDistricts h2 {
+          text-align: center; }
+        .banner .hotDistricts ul li {
+          margin-bottom: 16px; } }
+    @media (max-width: 500px) {
+      .banner .hotDistricts {
+        position: static;
+        margin-top: 40px; }
+        .banner .hotDistricts ul li {
+          float: none;
+          margin-left: auto;
+          margin-right: auto; } }
+
+.content {
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 133px;
+  padding-bottom: 40px;
+  background: #F7F7F7;
+  text-align: center; }
+  .content hr {
+    display: inline-block;
+    width: 44%;
+    border-top: 2px dashed #559AC8; }
+    @media (max-width: 500px) {
+      .content hr {
+        display: none; } }
+  .content > a {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid #559AC8;
+    border-radius: 100%;
+    background: url(../images/icons_down_2.png) center center no-repeat;
+    background-size: 11.2px 7.7px;
+    cursor: pointer; }
+    @media (max-width: 500px) {
+      .content > a {
+        display: none; } }
+  .content .dataList {
+    margin: 65px 24px 0 40px; }
+    @media (max-width: 1023px) {
+      .content .dataList {
+        margin: 65px 2.5% 0 2.5%; } }
+    @media (max-width: 767px) {
+      .content .dataList {
+        margin: 65px auto 0 auto; } }
+    @media (max-width: 500px) {
+      .content .dataList {
+        margin: 150px auto 0 auto; } }
+    .content .dataList h2 {
+      font-size: 36px;
+      color: #8A82CC; }
+    .content .dataList > li {
+      width: 464px;
+      float: left;
+      margin-top: 24px;
+      margin-right: 16px; }
+      @media (max-width: 1023px) {
+        .content .dataList > li {
+          margin-right: 1%;
+          width: 49%; } }
+      @media (max-width: 767px) {
+        .content .dataList > li {
+          margin-right: auto;
+          margin-left: auto;
+          float: none;
+          width: 464px; } }
+      @media (max-width: 767px) {
+        .content .dataList > li {
+          width: 98%; } }
+      .content .dataList > li .dataPicture {
+        height: 155px;
+        background: url("http://khh.travel/FileArtPic.ashx?id=988&w=1280&h=960") center center no-repeat, white;
+        position: relative; }
+        .content .dataList > li .dataPicture .dataTitle {
+          width: 100%;
+          height: 52px;
+          position: absolute;
+          bottom: 0;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.54)));
+          background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.54) 100%);
+          background-image: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.54) 100%);
+          background-image: linear-gradient(-180deg, transparent 0%, rgba(0, 0, 0, 0.54) 100%);
+          color: white; }
+          .content .dataList > li .dataPicture .dataTitle h3 {
+            font-size: 24px;
+            margin: 14px 0 14px 22px;
+            float: left; }
+          .content .dataList > li .dataPicture .dataTitle h4 {
+            float: right;
+            width: 73px;
+            margin: 24px 0 11px 0; }
+          .content .dataList > li .dataPicture .dataTitle:before, .content .dataList > li .dataPicture .dataTitle:after {
+            content: "";
+            display: table; }
+          .content .dataList > li .dataPicture .dataTitle:after {
+            clear: both; }
+      .content .dataList > li .dataDetail {
+        background: whtie;
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+        position: relative; }
+        .content .dataList > li .dataDetail > li {
+          text-align: left;
+          padding-top: 16px;
+          margin-left: 23px; }
+        .content .dataList > li .dataDetail .dataOpentime, .content .dataList > li .dataDetail .dataAdd {
+          width: 441px;
+          height: 37px; }
+          @media (max-width: 1023px) {
+            .content .dataList > li .dataDetail .dataOpentime, .content .dataList > li .dataDetail .dataAdd {
+              width: 90%; } }
+          @media (max-width: 767px) {
+            .content .dataList > li .dataDetail .dataOpentime, .content .dataList > li .dataDetail .dataAdd {
+              width: 414px;
+              height: auto; } }
+          @media (max-width: 500px) {
+            .content .dataList > li .dataDetail .dataOpentime, .content .dataList > li .dataDetail .dataAdd {
+              width: 90%; } }
+        .content .dataList > li .dataDetail .dataOpentime .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/icons_clock.png) center center no-repeat;
+          margin-right: 8px; }
+        .content .dataList > li .dataDetail .dataAdd .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/icons_pin.png) center center no-repeat;
+          margin-right: 8px; }
+        .content .dataList > li .dataDetail .dataTel .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/icons_phone.png) center center no-repeat;
+          margin-right: 8px; }
+        .content .dataList > li .dataDetail .dataTel {
+          padding-bottom: 20px; }
+        .content .dataList > li .dataDetail .dataTicketinfo .icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url(../images/icons_tag.png) center center no-repeat;
+          margin-right: 8px; }
+        .content .dataList > li .dataDetail .dataTicketinfo {
+          position: absolute;
+          width: 118px;
+          right: 0;
+          bottom: 20px; }
+    .content .dataList:before, .content .dataList:after {
+      content: "";
+      display: table; }
+    .content .dataList:after {
+      clear: both; }
+  .content .dataPage {
+    margin: 49px auto 0 auto; }
+    .content .dataPage > li {
+      display: inline-block;
+      font-size: 14px; }
+      .content .dataPage > li a {
+        display: block; }
+      .content .dataPage > li .prev, .content .dataPage > li .next {
+        width: 50px;
+        height: 24px;
+        color: #4A4A4A; }
+      .content .dataPage > li .page {
+        width: 24px;
+        height: 24px;
+        color: #4A4A4A; }
+      .content .dataPage > li .page.thisPage, .content .dataPage > li a:hover, .content .dataPage > li a:active {
+        color: #559AC8; }
+      .content .dataPage > li .none, .content .dataPage > li .none:hover, .content .dataPage > li .none:active {
+        color: rgba(73, 73, 73, 0.5); }
+
+.footer {
+  width: 100%;
+  height: 90px;
+  background: #559AC8;
+  padding: 24px 0; }
+  .footer .footnote1,
+  .footer .footnote2 {
+    margin: auto;
+    font-size: 14px; }
+  .footer .footnote1 {
+    width: 70px;
+    color: white;
+    margin-bottom: 14px; }
+  .footer .footnote2 {
+    width: 144px;
+    color: #FFD366; }
+
+.top a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/btn_goTop.png) center center no-repeat;
+  position: fixed;
+  bottom: 195px;
+  right: 28px; }
+  @media (max-width: 768px) {
+    .top a {
+      bottom: 20%; } }

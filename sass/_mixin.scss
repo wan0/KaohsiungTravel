@@ -1,0 +1,13 @@
+$font: 微軟正黑體;
+$backgroundColor: #F7F7F7;
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
