@@ -4,7 +4,7 @@ var data = []; //data先宣告成陣列
 var dataJSON;
 var dataNum;
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://github.com/wan0/KaohsiungTravel/tree/master/js/data.json', true);
+xhr.open('get', 'https://wan0.github.io/KaohsiungTravel/js/data.json', true);
 xhr.send(null);
 xhr.onload = function () {
     if (xhr.status == 200) {
