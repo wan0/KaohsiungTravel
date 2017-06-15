@@ -4,7 +4,7 @@ var data = []; //data先宣告成陣列
 var dataJSON;
 var dataNum;
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97&limit=268', true);
+xhr.open('get', 'https://github.com/wan0/KaohsiungTravel/tree/master/js/data.json', true);
 xhr.send(null);
 xhr.onload = function () {
     if (xhr.status == 200) {
